@@ -30,7 +30,7 @@ export const getRide = createAsyncThunk(
     try {
       const response = await fetch(URL.getbooking());
       if (!response.ok) {
-        throw new Error('Ride booking failed');
+        throw new Error('Ride not found');
       }
       const data = await response.json();
       return data;

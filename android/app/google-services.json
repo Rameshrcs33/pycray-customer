@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "653247648919",
+    "project_id": "pycray-3fd07",
+    "storage_bucket": "pycray-3fd07.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653247648919:android:7134a3abbb93ed99e005d2",
+        "android_client_info": {
+          "package_name": "com.pycraycustomer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUrHWVyVqZYCOPNukPiEox7xmvq5oJpsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

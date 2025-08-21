@@ -7,7 +7,7 @@ export const getUser = createAsyncThunk(
     try {
       const response = await fetch(URL.getuser(payload));
       if (!response.ok) {
-        throw new Error('Ride booking failed');
+        throw new Error('User not found');
       }
       const data = await response.json();
       return data;
@@ -29,7 +29,7 @@ export const updateFcmToken = createAsyncThunk(
         body: JSON.stringify(payload),
       });
       if (!response.ok) {
-        throw new Error('Ride booking failed');
+        throw new Error('User updation failed');
       }
       const data = await response.json();
       return data;

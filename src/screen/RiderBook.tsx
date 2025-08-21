@@ -10,6 +10,8 @@ import {
   FlatList,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import messaging from '@react-native-firebase/messaging';
+
 import Loader from '../component/Loader';
 import { bookRide, getRide } from '../redux/slice/bookingReducer';
 import { getUser, updateFcmToken } from '../redux/slice/userReducer';
@@ -47,11 +49,13 @@ const RiderBook = () => {
 
   const updateToken = async () => {
     try {
+      await messaging().registerDeviceForRemoteMessages();
+      const fcmToken = await messaging().getToken();
       const payload: any = {
         role: 'customer',
-        fcmToken: 'just ckecking token insertion',
+        fcmToken: fcmToken,
       };
-      await storeData(token, payload?.fcmToken);
+      await storeData(token, fcmToken);
       await dispatch(updateFcmToken(payload));
       fetchUser();
     } catch (error) {}
