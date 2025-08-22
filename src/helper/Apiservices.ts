@@ -1,4 +1,4 @@
-const baseUrl = 'http://10.254.202.144:3000/api/';
+const baseUrl = 'https://api-pycray-backend.onrender.com/api/';
 
 export const URL = {
   getuser: (val: string) => {
